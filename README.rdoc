@@ -1,6 +1,6 @@
 Contractor Rating Tool
 =======================
 
-This project serves as an easy to to identify, rate, and choose contractor workers.
+This project serves to easily identify, rate, and choose contractor workers based on various filtering criteria.
 
 
