@@ -1,0 +1,1608 @@
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-03-04 18:50:24 -0500
+Connecting to database specified by database.yml
+Served asset /rails.png - 200 OK (4ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (128.3ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (259.3ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36m (1.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateContractors (20130304235349)
+  [1m[35m (78.5ms)[0m  CREATE TABLE `contractors` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `contractor_id` int(11), `first_name` varchar(255), `last_name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (145.4ms)[0m  [1mCREATE UNIQUE INDEX `index_contractors_on_contractor_id` ON `contractors` (`contractor_id`)[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20130304235349')
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Connecting to database specified by database.yml
+
+
+Started GET "/contractors/" for 127.0.0.1 at 2013-03-04 19:22:07 -0500
+Connecting to database specified by database.yml
+
+AbstractController::ActionNotFound (The action 'index' could not be found for ContractorsController):
+  actionpack (3.2.12) lib/abstract_controller/base.rb:116:in `process'
+  actionpack (3.2.12) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.12) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.12) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.12) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.12) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `_run__2262249712962100044__call__3573776673526877126__callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/Emily/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/Emily/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/Emily/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (2.1ms)
+
+
+Started GET "/contractors/" for 127.0.0.1 at 2013-03-04 19:23:43 -0500
+
+SyntaxError (/Users/Emily/projects/contractor_rating_tool/app/controllers/contractors_controller.rb:4: syntax error, unexpected $end):
+  activesupport (3.2.12) lib/active_support/dependencies.rb:469:in `load'
+  activesupport (3.2.12) lib/active_support/dependencies.rb:469:in `block in load_file'
+  activesupport (3.2.12) lib/active_support/dependencies.rb:639:in `new_constants_in'
+  activesupport (3.2.12) lib/active_support/dependencies.rb:468:in `load_file'
+  activesupport (3.2.12) lib/active_support/dependencies.rb:353:in `require_or_load'
+  activesupport (3.2.12) lib/active_support/dependencies.rb:502:in `load_missing_constant'
+  activesupport (3.2.12) lib/active_support/dependencies.rb:192:in `block in const_missing'
+  activesupport (3.2.12) lib/active_support/dependencies.rb:190:in `each'
+  activesupport (3.2.12) lib/active_support/dependencies.rb:190:in `const_missing'
+  activesupport (3.2.12) lib/active_support/inflector/methods.rb:230:in `block in constantize'
+  activesupport (3.2.12) lib/active_support/inflector/methods.rb:229:in `each'
+  activesupport (3.2.12) lib/active_support/inflector/methods.rb:229:in `constantize'
+  activesupport (3.2.12) lib/active_support/dependencies.rb:554:in `get'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:69:in `controller_reference'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:54:in `controller'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:32:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.12) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `_run__2262249712962100044__call__3573776673526877126__callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/Emily/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/Emily/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/Emily/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (43.1ms)
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (49.7ms)
+
+
+Started GET "/contractors/" for 127.0.0.1 at 2013-03-04 19:24:28 -0500
+
+SyntaxError (/Users/Emily/projects/contractor_rating_tool/app/controllers/contractors_controller.rb:4: syntax error, unexpected $end):
+  activesupport (3.2.12) lib/active_support/dependencies.rb:469:in `load'
+  activesupport (3.2.12) lib/active_support/dependencies.rb:469:in `block in load_file'
+  activesupport (3.2.12) lib/active_support/dependencies.rb:639:in `new_constants_in'
+  activesupport (3.2.12) lib/active_support/dependencies.rb:468:in `load_file'
+  activesupport (3.2.12) lib/active_support/dependencies.rb:353:in `require_or_load'
+  activesupport (3.2.12) lib/active_support/dependencies.rb:502:in `load_missing_constant'
+  activesupport (3.2.12) lib/active_support/dependencies.rb:192:in `block in const_missing'
+  activesupport (3.2.12) lib/active_support/dependencies.rb:190:in `each'
+  activesupport (3.2.12) lib/active_support/dependencies.rb:190:in `const_missing'
+  activesupport (3.2.12) lib/active_support/inflector/methods.rb:230:in `block in constantize'
+  activesupport (3.2.12) lib/active_support/inflector/methods.rb:229:in `each'
+  activesupport (3.2.12) lib/active_support/inflector/methods.rb:229:in `constantize'
+  activesupport (3.2.12) lib/active_support/dependencies.rb:554:in `get'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:69:in `controller_reference'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:54:in `controller'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:32:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.12) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `_run__2262249712962100044__call__3573776673526877126__callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/Emily/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/Emily/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/Emily/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.8ms)
+
+
+Started GET "/contractors/" for 127.0.0.1 at 2013-03-04 19:27:39 -0500
+
+SyntaxError (/Users/Emily/projects/contractor_rating_tool/app/controllers/contractors_controller.rb:4: syntax error, unexpected $end):
+  activesupport (3.2.12) lib/active_support/dependencies.rb:469:in `load'
+  activesupport (3.2.12) lib/active_support/dependencies.rb:469:in `block in load_file'
+  activesupport (3.2.12) lib/active_support/dependencies.rb:639:in `new_constants_in'
+  activesupport (3.2.12) lib/active_support/dependencies.rb:468:in `load_file'
+  activesupport (3.2.12) lib/active_support/dependencies.rb:353:in `require_or_load'
+  activesupport (3.2.12) lib/active_support/dependencies.rb:502:in `load_missing_constant'
+  activesupport (3.2.12) lib/active_support/dependencies.rb:192:in `block in const_missing'
+  activesupport (3.2.12) lib/active_support/dependencies.rb:190:in `each'
+  activesupport (3.2.12) lib/active_support/dependencies.rb:190:in `const_missing'
+  activesupport (3.2.12) lib/active_support/inflector/methods.rb:230:in `block in constantize'
+  activesupport (3.2.12) lib/active_support/inflector/methods.rb:229:in `each'
+  activesupport (3.2.12) lib/active_support/inflector/methods.rb:229:in `constantize'
+  activesupport (3.2.12) lib/active_support/dependencies.rb:554:in `get'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:69:in `controller_reference'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:54:in `controller'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:32:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.12) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `_run__2262249712962100044__call__3573776673526877126__callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/Emily/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/Emily/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/Emily/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.7ms)
+
+
+Started GET "/contractors/" for 127.0.0.1 at 2013-03-04 19:27:59 -0500
+
+ActionController::RoutingError (undefined method `ApplicationController' for main:Object):
+  app/controllers/contractors_controller.rb:4:in `<top (required)>'
+
+
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/contractors/" for 127.0.0.1 at 2013-03-04 19:28:26 -0500
+
+ActionController::RoutingError (undefined method `ApplicationController' for main:Object):
+  app/controllers/contractors_controller.rb:4:in `<top (required)>'
+
+
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/contractors/" for 127.0.0.1 at 2013-03-04 19:28:33 -0500
+
+ActionController::RoutingError (undefined method `ApplicationController' for main:Object):
+  app/controllers/contractors_controller.rb:4:in `<top (required)>'
+
+
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/contractors/" for 127.0.0.1 at 2013-03-04 19:29:18 -0500
+
+ActionController::RoutingError (undefined method `ApplicationController' for main:Object):
+  app/controllers/contractors_controller.rb:4:in `<top (required)>'
+
+
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/contractors/" for 127.0.0.1 at 2013-03-04 19:31:30 -0500
+Connecting to database specified by database.yml
+
+ActionController::RoutingError (undefined method `ApplicationController' for main:Object):
+  app/controllers/contractors_controller.rb:4:in `<top (required)>'
+
+
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-03-04 19:31:33 -0500
+Served asset /rails.png - 304 Not Modified (1ms)
+
+
+Started GET "/contractors" for 127.0.0.1 at 2013-03-04 19:31:46 -0500
+
+ActionController::RoutingError (undefined method `ApplicationController' for main:Object):
+  app/controllers/contractors_controller.rb:4:in `<top (required)>'
+
+
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/contractors" for 127.0.0.1 at 2013-03-04 19:33:06 -0500
+
+ActionController::RoutingError (undefined method `ApplicationController' for main:Object):
+  app/controllers/contractors_controller.rb:4:in `<top (required)>'
+
+
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/contractors" for 127.0.0.1 at 2013-03-04 19:34:23 -0500
+
+ActionController::RoutingError (undefined method `ApplicationController' for main:Object):
+  app/controllers/contractors_controller.rb:4:in `<top (required)>'
+
+
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/contractors" for 127.0.0.1 at 2013-03-04 19:35:12 -0500
+Connecting to database specified by database.yml
+
+ActionController::RoutingError (undefined method `ApplicationController' for main:Object):
+  app/controllers/contractors_controller.rb:4:in `<top (required)>'
+
+
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/contractors/" for 127.0.0.1 at 2013-03-04 19:36:34 -0500
+
+ActionController::RoutingError (undefined method `ApplicationController' for main:Object):
+  app/controllers/contractors_controller.rb:4:in `<top (required)>'
+
+
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/contractors/" for 127.0.0.1 at 2013-03-04 19:37:31 -0500
+Connecting to database specified by database.yml
+
+ActionController::RoutingError (undefined method `ApplicationController' for main:Object):
+  app/controllers/contractors_controller.rb:4:in `<top (required)>'
+
+
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/contractors/" for 127.0.0.1 at 2013-03-04 19:38:44 -0500
+Connecting to database specified by database.yml
+
+ActionController::RoutingError (undefined method `ApplicationController' for main:Object):
+  app/controllers/contractors_controller.rb:4:in `<top (required)>'
+
+
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/contractors/" for 127.0.0.1 at 2013-03-04 19:39:49 -0500
+Processing by ContractorsController#index as HTML
+  [1m[36mContractor Load (0.2ms)[0m  [1mSELECT `contractors`.* FROM `contractors` [0m
+  Rendered contractors/index.html.erb within layouts/application (49.3ms)
+Completed 500 Internal Server Error in 69ms
+
+ActionView::Template::Error (undefined local variable or method `contract' for #<#<Class:0x007fbb7d08df50>:0x007fbb7d08b160>):
+    3: <ul id="contractors">
+    4:   <% @contractors.each do |contractor| %>
+    5:     <li>
+    6:       <%= contract.first_name %>
+    7:     </li>
+    8:     <li>
+    9:       <%= contract.last_name %>
+  app/views/contractors/index.html.erb:6:in `block in _app_views_contractors_index_html_erb___1425200016730156629_70221616680600'
+  app/views/contractors/index.html.erb:4:in `each'
+  app/views/contractors/index.html.erb:4:in `_app_views_contractors_index_html_erb___1425200016730156629_70221616680600'
+
+
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.4ms)
+
+
+Started GET "/contractors/" for 127.0.0.1 at 2013-03-04 19:40:11 -0500
+Processing by ContractorsController#index as HTML
+  [1m[35mContractor Load (0.2ms)[0m  SELECT `contractors`.* FROM `contractors` 
+  Rendered contractors/index.html.erb within layouts/application (14.9ms)
+Compiled contractors.css  (66ms)  (pid 2445)
+Compiled application.css  (72ms)  (pid 2445)
+Compiled jquery.js  (2ms)  (pid 2445)
+Compiled jquery_ujs.js  (0ms)  (pid 2445)
+Compiled contractors.js  (366ms)  (pid 2445)
+Compiled application.js  (426ms)  (pid 2445)
+Completed 200 OK in 603ms (Views: 601.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/contractors.css?body=1" for 127.0.0.1 at 2013-03-04 19:40:11 -0500
+Served asset /contractors.css - 200 OK (1ms)
+
+
+Started GET "/assets/contractors.js?body=1" for 127.0.0.1 at 2013-03-04 19:40:11 -0500
+Served asset /contractors.js - 200 OK (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-04 19:40:11 -0500
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-04 19:40:11 -0500
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-04 19:40:11 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-04 19:40:11 -0500
+Served asset /application.js - 200 OK (3ms)
+
+
+Started GET "/contractors/" for 127.0.0.1 at 2013-03-04 19:42:14 -0500
+Processing by ContractorsController#index as HTML
+  [1m[36mContractor Load (0.2ms)[0m  [1mSELECT `contractors`.* FROM `contractors` [0m
+  Rendered contractors/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/contractors.css?body=1" for 127.0.0.1 at 2013-03-04 19:42:14 -0500
+Served asset /contractors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-04 19:42:14 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-04 19:42:14 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-04 19:42:14 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-04 19:42:14 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contractors.js?body=1" for 127.0.0.1 at 2013-03-04 19:42:14 -0500
+Served asset /contractors.js - 304 Not Modified (0ms)
+
+
+Started GET "/contractors/" for 127.0.0.1 at 2013-03-04 19:42:27 -0500
+Processing by ContractorsController#index as HTML
+  [1m[35mContractor Load (0.3ms)[0m  SELECT `contractors`.* FROM `contractors` 
+  Rendered contractors/index.html.erb within layouts/application (0.1ms)
+Compiled contractors.css  (2ms)  (pid 2445)
+Compiled application.css  (0ms)  (pid 2445)
+Completed 200 OK in 45ms (Views: 44.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-04 19:42:27 -0500
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/contractors.css?body=1" for 127.0.0.1 at 2013-03-04 19:42:27 -0500
+Served asset /contractors.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-04 19:42:27 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-04 19:42:27 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contractors.js?body=1" for 127.0.0.1 at 2013-03-04 19:42:27 -0500
+Served asset /contractors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-04 19:42:27 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/contractors/" for 127.0.0.1 at 2013-03-04 19:42:47 -0500
+Processing by ContractorsController#index as HTML
+  [1m[36mContractor Load (0.3ms)[0m  [1mSELECT `contractors`.* FROM `contractors` [0m
+  Rendered contractors/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-04 19:42:47 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contractors.js?body=1" for 127.0.0.1 at 2013-03-04 19:42:47 -0500
+Served asset /contractors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contractors.css?body=1" for 127.0.0.1 at 2013-03-04 19:42:47 -0500
+Served asset /contractors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-04 19:42:47 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-04 19:42:47 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-04 19:42:47 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/contractors/" for 127.0.0.1 at 2013-03-04 19:50:14 -0500
+Connecting to database specified by database.yml
+Processing by ContractorsController#index as HTML
+  [1m[36mContractor Load (0.2ms)[0m  [1mSELECT `contractors`.* FROM `contractors` [0m
+  Rendered contractors/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 57ms (Views: 36.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-04 19:50:14 -0500
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/contractors.css?body=1" for 127.0.0.1 at 2013-03-04 19:50:14 -0500
+Served asset /contractors.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-04 19:50:14 -0500
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/contractors.js?body=1" for 127.0.0.1 at 2013-03-04 19:50:14 -0500
+Served asset /contractors.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-04 19:50:14 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-04 19:50:14 -0500
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/contractors/1" for 127.0.0.1 at 2013-03-04 19:50:16 -0500
+
+AbstractController::ActionNotFound (The action 'show' could not be found for ContractorsController):
+  actionpack (3.2.12) lib/abstract_controller/base.rb:116:in `process'
+  actionpack (3.2.12) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.12) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.12) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.12) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.12) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `_run__4150595863359392278__call__2037796474061997474__callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/Emily/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/Emily/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/Emily/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.4ms)
+
+
+Started GET "/contractors/2" for 127.0.0.1 at 2013-03-04 19:50:23 -0500
+
+AbstractController::ActionNotFound (The action 'show' could not be found for ContractorsController):
+  actionpack (3.2.12) lib/abstract_controller/base.rb:116:in `process'
+  actionpack (3.2.12) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.12) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.12) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.12) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.12) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `_run__4150595863359392278__call__2037796474061997474__callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/Emily/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/Emily/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/Emily/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.3ms)
+
+
+Started GET "/contractors/1" for 127.0.0.1 at 2013-03-04 19:50:28 -0500
+
+AbstractController::ActionNotFound (The action 'show' could not be found for ContractorsController):
+  actionpack (3.2.12) lib/abstract_controller/base.rb:116:in `process'
+  actionpack (3.2.12) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.12) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.12) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.12) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.12) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `_run__4150595863359392278__call__2037796474061997474__callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/Emily/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/Emily/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/Emily/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.4ms)
+
+
+Started GET "/contractors/2" for 127.0.0.1 at 2013-03-04 19:50:32 -0500
+
+AbstractController::ActionNotFound (The action 'show' could not be found for ContractorsController):
+  actionpack (3.2.12) lib/abstract_controller/base.rb:116:in `process'
+  actionpack (3.2.12) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.12) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.12) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.12) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.12) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `_run__4150595863359392278__call__2037796474061997474__callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/Emily/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/Emily/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/Emily/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.3ms)
+
+
+Started GET "/contractors/" for 127.0.0.1 at 2013-03-04 19:50:50 -0500
+Processing by ContractorsController#index as HTML
+  [1m[35mContractor Load (0.3ms)[0m  SELECT `contractors`.* FROM `contractors` 
+  Rendered contractors/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-04 19:50:50 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-04 19:50:50 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-04 19:50:50 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contractors.css?body=1" for 127.0.0.1 at 2013-03-04 19:50:50 -0500
+Served asset /contractors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contractors.js?body=1" for 127.0.0.1 at 2013-03-04 19:50:50 -0500
+Served asset /contractors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-04 19:50:50 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/contractors/" for 127.0.0.1 at 2013-03-04 19:53:46 -0500
+Connecting to database specified by database.yml
+Processing by ContractorsController#index as HTML
+  [1m[36mContractor Load (0.1ms)[0m  [1mSELECT `contractors`.* FROM `contractors` [0m
+  Rendered contractors/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 56ms (Views: 36.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-04 19:53:46 -0500
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/contractors.css?body=1" for 127.0.0.1 at 2013-03-04 19:53:46 -0500
+Served asset /contractors.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-04 19:53:46 -0500
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-04 19:53:46 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/contractors.js?body=1" for 127.0.0.1 at 2013-03-04 19:53:46 -0500
+Served asset /contractors.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-04 19:53:46 -0500
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/contractors/new" for 127.0.0.1 at 2013-03-04 19:53:48 -0500
+
+AbstractController::ActionNotFound (The action 'new' could not be found for ContractorsController):
+  actionpack (3.2.12) lib/abstract_controller/base.rb:116:in `process'
+  actionpack (3.2.12) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.12) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.12) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.12) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.12) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `_run__1839770531568371260__call__3986568745489699096__callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/Emily/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/Emily/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/Emily/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.3ms)
+
+
+Started GET "/contractors/" for 127.0.0.1 at 2013-03-04 19:57:36 -0500
+Processing by ContractorsController#index as HTML
+  [1m[35mContractor Load (0.1ms)[0m  SELECT `contractors`.* FROM `contractors` 
+  Rendered contractors/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 3.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/contractors.css?body=1" for 127.0.0.1 at 2013-03-04 19:57:36 -0500
+Served asset /contractors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-04 19:57:36 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-04 19:57:36 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-04 19:57:36 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contractors.js?body=1" for 127.0.0.1 at 2013-03-04 19:57:36 -0500
+Served asset /contractors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-04 19:57:36 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/contractors/new" for 127.0.0.1 at 2013-03-04 19:57:37 -0500
+Processing by ContractorsController#new as HTML
+  Rendered contractors/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-04 19:57:37 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-04 19:57:37 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contractors.css?body=1" for 127.0.0.1 at 2013-03-04 19:57:37 -0500
+Served asset /contractors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contractors.js?body=1" for 127.0.0.1 at 2013-03-04 19:57:37 -0500
+Served asset /contractors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-04 19:57:37 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-04 19:57:37 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/contractors/" for 127.0.0.1 at 2013-03-04 20:03:46 -0500
+Processing by ContractorsController#index as HTML
+  [1m[36mContractor Load (0.1ms)[0m  [1mSELECT `contractors`.* FROM `contractors` [0m
+  Rendered contractors/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 4.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-04 20:03:46 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-04 20:03:46 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-04 20:03:46 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contractors.css?body=1" for 127.0.0.1 at 2013-03-04 20:03:46 -0500
+Served asset /contractors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contractors.js?body=1" for 127.0.0.1 at 2013-03-04 20:03:46 -0500
+Served asset /contractors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-04 20:03:46 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/contractors/new" for 127.0.0.1 at 2013-03-04 20:03:48 -0500
+Processing by ContractorsController#new as HTML
+  Rendered contractors/new.html.erb within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
+    1: <h1>Add a New Contractor</h1>
+    2: <%= form_for(@article) do |f| %>
+    3:   <ul>
+    4:   <% @contractor.errors.full_messages.each do |error| %>
+    5:     <li><%= error %></li>
+  app/views/contractors/new.html.erb:2:in `_app_views_contractors_new_html_erb___4169632346733242311_70182895928520'
+
+
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.9ms)
+
+
+Started GET "/contractors/new" for 127.0.0.1 at 2013-03-04 20:04:05 -0500
+Processing by ContractorsController#new as HTML
+  Rendered contractors/new.html.erb within layouts/application (73.3ms)
+Completed 200 OK in 78ms (Views: 77.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-04 20:04:05 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contractors.css?body=1" for 127.0.0.1 at 2013-03-04 20:04:05 -0500
+Served asset /contractors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contractors.js?body=1" for 127.0.0.1 at 2013-03-04 20:04:05 -0500
+Served asset /contractors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-04 20:04:05 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-04 20:04:05 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-04 20:04:05 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started POST "/contractors" for 127.0.0.1 at 2013-03-04 20:04:14 -0500
+
+AbstractController::ActionNotFound (The action 'create' could not be found for ContractorsController):
+  actionpack (3.2.12) lib/abstract_controller/base.rb:116:in `process'
+  actionpack (3.2.12) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.12) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.12) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.12) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:35:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.12) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `_run__1839770531568371260__call__3986568745489699096__callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/Emily/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/Emily/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/Emily/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.4ms)
+
+
+Started POST "/contractors" for 127.0.0.1 at 2013-03-04 20:05:37 -0500
+Processing by ContractorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hIycc5aLAEQ/vqstcdzg3x27aPKEdD2xQo9hUHYhRs8=", "contractor"=>{"first_name"=>"Thomas", "last_name"=>"S"}, "commit"=>"Create Contractor"}
+Completed 500 Internal Server Error in 0ms
+
+RuntimeError ():
+  app/controllers/contractors_controller.rb:11:in `create'
+
+
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (12.7ms)
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.1ms)
+
+
+Started POST "/contractors" for 127.0.0.1 at 2013-03-04 20:09:33 -0500
+Connecting to database specified by database.yml
+Processing by ContractorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hIycc5aLAEQ/vqstcdzg3x27aPKEdD2xQo9hUHYhRs8=", "contractor"=>{"first_name"=>"Thomas", "last_name"=>"S"}, "commit"=>"Create Contractor"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO `contractors` (`contractor_id`, `created_at`, `first_name`, `last_name`, `updated_at`) VALUES (NULL, '2013-03-05 01:09:33', 'Thomas', 'S', '2013-03-05 01:09:33')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/contractors/3
+Completed 302 Found in 63ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/contractors/3" for 127.0.0.1 at 2013-03-04 20:09:33 -0500
+
+AbstractController::ActionNotFound (The action 'show' could not be found for ContractorsController):
+  actionpack (3.2.12) lib/abstract_controller/base.rb:116:in `process'
+  actionpack (3.2.12) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.12) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.12) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.12) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.12) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `_run__1902129798565972612__call__4035523870110137735__callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/Emily/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/Emily/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/Emily/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (1.8ms)
+
+
+Started GET "/contractors/3" for 127.0.0.1 at 2013-03-04 20:12:10 -0500
+Processing by ContractorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendered contractors/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 30ms (Views: 29.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-04 20:12:10 -0500
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/contractors.css?body=1" for 127.0.0.1 at 2013-03-04 20:12:10 -0500
+Served asset /contractors.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-04 20:12:10 -0500
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-04 20:12:10 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-04 20:12:10 -0500
+Served asset /application.js - 304 Not Modified (21ms)
+
+
+Started GET "/assets/contractors.js?body=1" for 127.0.0.1 at 2013-03-04 20:12:10 -0500
+Served asset /contractors.js - 304 Not Modified (1ms)
+
+
+Started GET "/contractors/3" for 127.0.0.1 at 2013-03-04 20:13:05 -0500
+Processing by ContractorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendered contractors/show.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    2: 
+    3: <table id="contractors">
+    4: 	<tr>
+    5:   <% @contractors.each do |contractor| %>
+    6:     <td>
+    7:       <%= contractor.first_name %>
+    8:     </td>
+  app/views/contractors/show.html.erb:5:in `_app_views_contractors_show_html_erb___1277099272563623538_70207184530940'
+
+
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.6ms)
+
+
+Started GET "/contractors/3" for 127.0.0.1 at 2013-03-04 20:14:12 -0500
+Processing by ContractorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendered contractors/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-04 20:14:12 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contractors.css?body=1" for 127.0.0.1 at 2013-03-04 20:14:12 -0500
+Served asset /contractors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-04 20:14:12 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-04 20:14:12 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-04 20:14:12 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contractors.js?body=1" for 127.0.0.1 at 2013-03-04 20:14:12 -0500
+Served asset /contractors.js - 304 Not Modified (0ms)
+
+
+Started GET "/contractors/3" for 127.0.0.1 at 2013-03-04 20:15:55 -0500
+Processing by ContractorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendered contractors/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 3ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-04 20:15:55 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contractors.js?body=1" for 127.0.0.1 at 2013-03-04 20:15:55 -0500
+Served asset /contractors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-04 20:15:55 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-04 20:15:55 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-04 20:15:55 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contractors.css?body=1" for 127.0.0.1 at 2013-03-04 20:15:55 -0500
+Served asset /contractors.css - 304 Not Modified (0ms)
+
+
+Started GET "/contractors/3" for 127.0.0.1 at 2013-03-04 20:16:55 -0500
+Processing by ContractorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendered contractors/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-04 20:16:55 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contractors.js?body=1" for 127.0.0.1 at 2013-03-04 20:16:55 -0500
+Served asset /contractors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-04 20:16:55 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-04 20:16:55 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contractors.css?body=1" for 127.0.0.1 at 2013-03-04 20:16:55 -0500
+Served asset /contractors.css - 304 Not Modified (0ms)
+
+
+Started GET "/contractors/3" for 127.0.0.1 at 2013-03-04 20:18:31 -0500
+Processing by ContractorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendered contractors/show.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 2ms
+
+ActionView::Template::Error (undefined method `first_name' for nil:NilClass):
+    1: <h1>Contractor Added!</h1>
+    2: 
+    3: <p>Name:</p>
+    4: <%= @contractor.first_name %>
+    5: <%= @contractor.last_name %>
+    6: </p>
+  app/views/contractors/show.html.erb:4:in `_app_views_contractors_show_html_erb___1277099272563623538_70207170755120'
+
+
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.7ms)
+
+
+Started GET "/contractors/3" for 127.0.0.1 at 2013-03-04 20:19:11 -0500
+Processing by ContractorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendered contractors/show.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 2ms
+
+ActionView::Template::Error (undefined method `create' for nil:NilClass):
+    1: <h1>Contractor Added!</h1>
+    2: 
+    3: <p>Name:</p>
+    4: <%= @contractor.create.first_name %>
+    5: <%= @contractor.create.last_name %>
+    6: </p>
+  app/views/contractors/show.html.erb:4:in `_app_views_contractors_show_html_erb___1277099272563623538_70207186777180'
+
+
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.5ms)
+
+
+Started GET "/contractors/3" for 127.0.0.1 at 2013-03-04 20:19:56 -0500
+Processing by ContractorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendered contractors/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 15.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-04 20:19:56 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/contractors.css?body=1" for 127.0.0.1 at 2013-03-04 20:19:56 -0500
+Served asset /contractors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-04 20:19:56 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-04 20:19:56 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-04 20:19:56 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contractors.js?body=1" for 127.0.0.1 at 2013-03-04 20:19:56 -0500
+Served asset /contractors.js - 304 Not Modified (0ms)
+
+
+Started GET "/contractors/3" for 127.0.0.1 at 2013-03-04 20:21:33 -0500
+Connecting to database specified by database.yml
+Processing by ContractorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendered contractors/show.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 35ms (Views: 34.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-04 20:21:34 -0500
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/contractors.css?body=1" for 127.0.0.1 at 2013-03-04 20:21:34 -0500
+Served asset /contractors.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-04 20:21:34 -0500
+Served asset /jquery.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-04 20:21:34 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-04 20:21:34 -0500
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/contractors.js?body=1" for 127.0.0.1 at 2013-03-04 20:21:34 -0500
+Served asset /contractors.js - 304 Not Modified (1ms)
+
+
+Started GET "/contractors/3" for 127.0.0.1 at 2013-03-04 20:23:52 -0500
+Processing by ContractorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendered contractors/show.html.erb within layouts/application (6.1ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined local variable or method `contractor' for #<#<Class:0x007f823ca8b4c8>:0x007f823c92fb38>):
+    1: <h1>Contractor Added!</h1>
+    2: 
+    3: <p><%= contractor.first_name %>
+    4:     </p>
+    5:     <p>
+    6:       <%= contractor.last_name %>
+  app/views/contractors/show.html.erb:3:in `_app_views_contractors_show_html_erb__3603844689957437960_70098669366520'
+
+
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.8ms)
+
+
+Started GET "/contractors/3" for 127.0.0.1 at 2013-03-04 20:24:57 -0500
+Processing by ContractorsController#show as HTML
+  Parameters: {"id"=>"3"}
+Completed 500 Internal Server Error in 1ms
+
+NameError (undefined local variable or method `id' for #<ContractorsController:0x007f823cb29268>):
+  app/controllers/contractors_controller.rb:17:in `show'
+
+
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.5ms)
+
+
+Started GET "/contractors/3" for 127.0.0.1 at 2013-03-04 20:25:40 -0500
+Processing by ContractorsController#show as HTML
+  Parameters: {"id"=>"3"}
+Completed 500 Internal Server Error in 18ms
+
+NameError (undefined local variable or method `id' for #<ContractorsController:0x007f8239904350>):
+  app/controllers/contractors_controller.rb:18:in `show'
+
+
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.9ms)
+
+
+Started GET "/contractors/3" for 127.0.0.1 at 2013-03-04 20:25:58 -0500
+Processing by ContractorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendered contractors/show.html.erb within layouts/application (18.3ms)
+Completed 500 Internal Server Error in 20ms
+
+ActionView::Template::Error (undefined local variable or method `contractor' for #<#<Class:0x007f823ce2bc18>:0x007f823c825b98>):
+    1: <h1>Contractor Added!</h1>
+    2: 
+    3: <p><%= contractor.first_name %>
+    4:     </p>
+    5:     <p>
+    6:       <%= contractor.last_name %>
+  app/views/contractors/show.html.erb:3:in `_app_views_contractors_show_html_erb__3603844689957437960_70098669366520'
+
+
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Users/Emily/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.5ms)
+
+
+Started GET "/contractors/3" for 127.0.0.1 at 2013-03-04 20:26:07 -0500
+Processing by ContractorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendered contractors/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-04 20:26:07 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contractors.js?body=1" for 127.0.0.1 at 2013-03-04 20:26:07 -0500
+Served asset /contractors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-04 20:26:07 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-04 20:26:07 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-04 20:26:07 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contractors.css?body=1" for 127.0.0.1 at 2013-03-04 20:26:07 -0500
+Served asset /contractors.css - 304 Not Modified (0ms)
+
+
+Started GET "/contractors/" for 127.0.0.1 at 2013-03-04 20:26:10 -0500
+Processing by ContractorsController#index as HTML
+  [1m[36mContractor Load (0.2ms)[0m  [1mSELECT `contractors`.* FROM `contractors` [0m
+  Rendered contractors/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 13ms (Views: 4.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-04 20:26:11 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-04 20:26:11 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contractors.css?body=1" for 127.0.0.1 at 2013-03-04 20:26:11 -0500
+Served asset /contractors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-04 20:26:11 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contractors.js?body=1" for 127.0.0.1 at 2013-03-04 20:26:11 -0500
+Served asset /contractors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-04 20:26:11 -0500
+Served asset /application.js - 304 Not Modified (0ms)
