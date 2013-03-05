@@ -1,0 +1,19 @@
+<h1>All Contractors</h1>
+
+<table id="contractors">
+	<tr>
+  <% @contractors.each do |contractor| %>
+    <td>
+      <%= contractor.first_name %>
+    </td>
+    <td>
+      <%= contractor.last_name %>
+    </td>
+    <td>
+      <%= contractor.contractor_id %>
+    </td>
+  </tr>
+  <% end %>
+</table>
+
+<%= link_to "Create New Contractor", new_contractor_path, class: "new_contractor" %>

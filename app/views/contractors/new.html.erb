@@ -1,0 +1,19 @@
+<h1>Add a New Contractor</h1>
+<%= form_for(@contractor) do |f| %>
+  <ul>
+  <% @contractor.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+  </ul>
+  <p>
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </p>
+  <p>
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
